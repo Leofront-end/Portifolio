@@ -1,0 +1,9 @@
+.card {
+    max-width: 50%;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.carousel-control-next > i, .carousel-control-prev > i {
+    font-size: 5vh;
+}
