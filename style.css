@@ -21,3 +21,15 @@ body {
     width: 200px;
     /* min-width: 250px; */
 }
+
+#WhatsApp {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    position: sticky;
+}
