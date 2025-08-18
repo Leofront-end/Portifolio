@@ -17,6 +17,8 @@ body {
     font-size: 5vh;
 }
 
+#skills > nav {cursor: pointer;}
+
 .hard-skills > .card, .soft-skills > .card{
     width: 200px;
     /* min-width: 250px; */
