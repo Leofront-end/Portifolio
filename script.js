@@ -5,8 +5,7 @@ let modal = document.querySelectorAll('dialog')
 let sorveteModal = document.querySelector("#sorvete")
 let clinicaModal = document.querySelector("#clinica")
 let ghibliModal = document.querySelector("#ghibli")
-
-
+let fecharModal = document.querySelectorAll(".bi.bi-x-lg")
 
 sorveteModal.addEventListener('click', () => {
     modal[0].showModal()
@@ -18,6 +17,18 @@ clinicaModal.addEventListener('click', () => {
 
 ghibliModal.addEventListener('click', () => {
     modal[2].showModal()
+})
+
+fecharModal[0].addEventListener('click', () => {
+    modal[0].close()
+})
+
+fecharModal[1].addEventListener('click', () => {
+    modal[1].close()
+})
+
+fecharModal[2].addEventListener('click', () => {
+    modal[2].close()
 })
 
 navSkills[1].addEventListener('click', () => {

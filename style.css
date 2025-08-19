@@ -17,6 +17,18 @@ body {
     font-size: 5vh;
 }
 
+dialog {
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px #0000007a;
+    
+}
+
+dialog::backdrop {
+    background-color: #000000b0;
+}
+
 #skills > nav {cursor: pointer;}
 
 .hard-skills > .card, .soft-skills > .card{
