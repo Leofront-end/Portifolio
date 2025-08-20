@@ -6,6 +6,13 @@ let sorveteModal = document.querySelector("#sorvete")
 let clinicaModal = document.querySelector("#clinica")
 let ghibliModal = document.querySelector("#ghibli")
 let fecharModal = document.querySelectorAll(".bi.bi-x-lg")
+let BotaoForm = document.querySelector("#formButton")
+let form = document.querySelector("form")
+
+BotaoForm.addEventListener('click', (e) => {
+    e.preventDefault()
+    if (form.getEle)
+})
 
 sorveteModal.addEventListener('click', () => {
     modal[0].showModal()

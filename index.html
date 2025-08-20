@@ -240,22 +240,22 @@
                 </div>
             </div>
         </section>
-        <section id="contato" class="px-5 py-2 m-3 ">
+        <section id="contato" class="py-2 m-3">
             <p class="h1 text-monospace text-center">Contato</p>
-            <form class="border border-primary rounded p-5 m-2">
+            <form method="post" class="border border-primary rounded p-2 my-2">
                 <div class="form-group mb-2">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" class="form-control border border-primary" placeholder="Digite seu email">
+                    <input type="email" name="email" id="email" class="form-control border border-primary" placeholder="Digite seu email" required>
                 </div>
                 <div class="form-group mb-2">
                     <label for="Titulo">Titulo</label>
-                    <input type="text" name="Titulo" id="Titulo" class="form-control  border border-primary" placeholder="Digite o titulo">
+                    <input type="text" name="Titulo" id="Titulo" class="form-control  border border-primary" placeholder="Digite o titulo" required>
                 </div>
                 <div class="form-group mb-2">
                     <label for="descricao">Descrição</label>
-                    <textarea name="descricao" id="descricao" rows="4" class="form-control  border border-primary" placeholder="Digite o conteudo"></textarea>
+                    <textarea name="descricao" id="descricao" rows="4" class="form-control  border border-primary" placeholder="Digite o conteudo" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                <button id="formButton" class="btn btn-primary mb-2">Enviar</button>
             </form>
             <div class="d-flex flex-wrap gap-2 justify-content-center">
                 <a href="https://www.linkedin.com/in/leonardo-silvafront/" target="_blank" class="btn btn-primary shadow w-75"><i class="bi bi-linkedin mx-2"></i>LinkedIn</a>
