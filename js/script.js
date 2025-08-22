@@ -1,59 +1,48 @@
 let navSkills = document.querySelectorAll(".skills")
 let habilidades = document.querySelectorAll('.habilidades')
 let textoSecundario = document.querySelector('.text-secondary')
-let modal = document.querySelectorAll('dialog')
-let sorveteModal = document.querySelector("#sorvete")
-let clinicaModal = document.querySelector("#clinica")
-let ghibliModal = document.querySelector("#ghibli")
-let fecharModal = document.querySelectorAll(".bi.bi-x-lg")
+let modais = document.querySelectorAll('dialog')
 let BotaoForm = document.querySelector("#formButton")
 let form = document.querySelector("form")
 
+let modalAbrir = {
+    sorvete: 0,
+    clinica: 1,
+    ghibli: 2
+}
+
+Object.entries(modalAbrir).forEach(([id, index]) => {
+    const abrir = document.querySelector(`#${id}`)
+    abrir.addEventListener('click', () => modais[index].showModal())
+})
+
+document.querySelectorAll(".bi.bi-x-lg").forEach((btnFechar, index) => {
+    btnFechar.addEventListener('click', () => modais[index].close())
+})
+
 BotaoForm.addEventListener('click', (e) => {
     e.preventDefault()
-    if (form.getEle)
+    if (form.checkValidity()) {
+        form.action = 'https://formsubmit.co/leonardo.s.mendonca05@gmail.com'
+        form.submit()
+    } else {
+        document.querySelector('form p').classList.remove('d-none')
+    }
 })
 
-sorveteModal.addEventListener('click', () => {
-    modal[0].showModal()
-})
+const toggleHabilidades = (ativa, inativa, texto) => {
+    navSkills[ativa].classList.add('active')
+    navSkills[inativa].classList.add('active')
 
-clinicaModal.addEventListener('click', () => {
-    modal[1].showModal()
-})
+    habilidades[inativa].classList.remove('d-flex') 
+    habilidades[inativa].classList.add('d-none') 
 
-ghibliModal.addEventListener('click', () => {
-    modal[2].showModal()
-})
+    habilidades[ativa].classList.add('d-flex')
+    habilidades[ativa].classList.remove('d-none')
 
-fecharModal[0].addEventListener('click', () => {
-    modal[0].close()
-})
+    textoSecundario.innerHTML = texto
+}
 
-fecharModal[1].addEventListener('click', () => {
-    modal[1].close()
-})
+navSkills[1].addEventListener('click', () => toggleHabilidades(1,0,"Clique no Hard Skills para ver minhas habilidades"))
 
-fecharModal[2].addEventListener('click', () => {
-    modal[2].close()
-})
-
-navSkills[1].addEventListener('click', () => {
-    navSkills[1].classList.add('active')
-    navSkills[0].classList.remove('active')
-    
-    habilidades[0].className = "hard-skills habilidades d-none flex-row gap-2 flex-wrap justify-content-center"
-    habilidades[1].className = "soft-skills habilidades d-flex flex-row gap-2 flex-wrap justify-content-center"
-
-    textoSecundario.innerHTML = "Clique no Hard Skills para ver minhas habilidades"
-})
-
-navSkills[0].addEventListener('click', () => {
-    navSkills[0].classList.add("active")
-    navSkills[1].classList.remove("active")
-    
-    habilidades[1].className = "hard-skills habilidades d-none flex-row gap-2 flex-wrap justify-content-center"
-    habilidades[0].className = "soft-skills habilidades d-flex flex-row gap-2 flex-wrap justify-content-center"
-
-    textoSecundario.innerHTML = "Clique no Soft Skills para ver minhas habilidades"
-})
+navSkills[0].addEventListener('click', () => toggleHabilidades(0,1,"Clique no Soft Skills para ver minhas habilidades"))
