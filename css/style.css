@@ -1,9 +1,7 @@
-body {
-    overflow-x: hidden;
-}
+body { overflow-x: hidden;}
 
 #paginaInicial {
-    background: url(image/Fundo.jpg);
+    background: url(../image/Fundo.jpg);
     background-size: cover;
 }
 
@@ -13,28 +11,20 @@ body {
     margin-bottom: 20px;
 }
 
-.carousel-control-next > i, .carousel-control-prev > i {
-    font-size: 5vh;
-}
+.carousel-control-next > i, .carousel-control-prev > i { font-size: 5vh;}
 
 dialog {
     width: 400px;
     border: none;
     border-radius: 5px;
     box-shadow: 1px 1px 6px #0000007a;
-    
 }
 
-dialog::backdrop {
-    background-color: #000000b0;
-}
+dialog::backdrop { background-color: #000000b0;}
 
 #skills > nav {cursor: pointer;}
 
-.hard-skills > .card, .soft-skills > .card{
-    width: 200px;
-    /* min-width: 250px; */
-}
+.hard-skills > .card, .soft-skills > .card{ width: 200px; }
 
 #WhatsApp {
     height: 50px;
