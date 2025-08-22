@@ -1,5 +1,9 @@
 body { overflow-x: hidden;}
 
+section[id] {
+  scroll-margin-top: 50px;
+}
+
 #paginaInicial {
     background: url(../image/Fundo.jpg);
     background-size: cover;
@@ -12,6 +16,12 @@ body { overflow-x: hidden;}
 }
 
 .carousel-control-next > i, .carousel-control-prev > i { font-size: 5vh;}
+
+.carousel-item .card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 dialog {
     width: 400px;
